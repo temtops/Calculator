@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container border calculator second third first p-3 mt-5 " id="calcu">
+        <div class=" container border-primary p-3 rounded screen" >
+            <input type="text" readonly placeholder="0" id="screen" class="text-end w-100 h-100 form-control">
+        </div>
+        <div class="row container mt-3 sci-op d-flex justify-content-around">
+                <button class=" op text-center col-sm-3" onclick="sin()">sin</button>
+                <button class="op text-center col-sm-3" onclick="tan()">tan</button>
+                <button class="op text-center col-sm-3" onclick="cos()">cos</button>
+                <button class="op text-center col-sm-3" onclick="e()">e</button>
+                <button class="op text-center col-sm-3" onclick="log()">log</button>
+                <button class="op text-center col-sm-3" onclick="ln()">ln</button>
+        </div>
+        <div class="row sci-op container d-flex justify-content-around">
+            <button class="op text-center col-sm-3" onclick="root()">&Sqrt;</button>
+                <button class="op text-center col-sm-3" onclick="power()">^</button>
+                <button class="op text-center col-sm-3" onclick="pi()">&pi;</button>
+                <button class="op text-center col-sm-3" onclick="bo()">(</button>
+                <button class="op text-center col-sm-3" onclick="bc()">)</button>
+                <button class="op text-center col-sm-3" onclick="percent()">%</button>
+        </div>
+        <div class="row mt-4 container numeric">
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">7</button>
+            </div>
+            <div class="col-sm-3  text-center">
+                <button class="btn  text-center w-100 ">8</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100 ">9</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="s btn text-center w-100">/</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">4</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">5</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">6</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="s btn text-center w-100">x</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100 ">1</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">2</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">3</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="s btn text-center w-100">-</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100 ">.</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="btn text-center w-100">0</button>
+            </div>
+            <div class="col-sm-3 text-center">
+                <button class="s btn text-center w-100 ">+</button>
+            </div>
+            <div class="col-sm-3  text-center ">
+                <button class="del  text-center w-100 rounded " onclick="del()">DEL</button>
+            </div>
+        </div>
+        <div class="row container mx-auto mt-2 end ">
+            <div class="col-sm-3 Theme-toggler active">
+                <input type="submit" value="Change 1" class=" w-100 icon" onclick="changeTheme()" style="height:50px">
+            </div>
+            <div class="col-sm-3 Theme-toggler active">
+                <input type="submit" value="Change 2" class=" w-100 icon" onclick="changetheme()" style="height:50px">
+            </div>
+            <div class="col-sm-3">
+                <button class="ac w-100" style="height:50px" onclick="ac()">AC</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="equal w-100" style="height:50px" onclick="screen.value = eval(screen.value)">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
