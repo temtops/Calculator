@@ -1,7 +1,7 @@
 // console.log("hello")
 let screen = document.querySelector('#screen');
 let btn = document.querySelectorAll('.btn')
-
+const time = document.getElementById('time')
 for(x of btn)
 {
     x.addEventListener('click',(a)=>{
@@ -42,7 +42,7 @@ function ln(){
     screen.value =  Math.LN2(screen.value)
 }
 function power(){
-    screen.value =  Math.pow(screen.value,2)
+    screen.value =  (screen.value*1)**btntext
 }
 function root(){
     screen.value =  Math.sqrt(screen.value,2)
@@ -51,7 +51,7 @@ function pi(){
     screen.value +=  3.1415926535
 }
 function e(){
-    screen.value +=  2.7182818284
+    screen.value = screen.value * (10**btntext)
 }
 function del(){
     screen.value =  screen.value.substr(0, screen.value.length-1)
@@ -79,6 +79,20 @@ function bc(){
     screen.value+= ")"
 }
 console.log("hello world 111")
+function setTime(){
+    let t = new Date();
+    h = t.getHours();
+    m = t.getMinutes();
+    s = t.getSeconds();
+    console.log(t)
+    console.log(h + m + s)
+    time.innerText = h + " : " + m + " : " + s
+}
+function message(){
+    alert("Hello")
+}
+setInterval(setTime, 1000)
+window.addEventListener('load', setTime())
 // // //BMI for John 1
 
 // // function BMI_John1(a, b) {
